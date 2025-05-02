@@ -3,16 +3,16 @@ import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config(object):
-    SECRET_KEY = os.environ.get('SECRET_KEY') or '86d5a719-76a4-4760-9316-e40d9480cf4e'
+    SECRET_KEY = os.environ.get('SECRET_KEY') or '2971343e-c5d9-4bce-a664-56e7d292b42e'
 
-    BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') or 'images11wspo'
-    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or '7Q00K4EpOseyfpXG+ZLFwLytR+KGbLIC+KAeTYtN0xv8upVJRl0f5ZFU8Nivfix5pwn/VBNQGoE++AStFdRYWw=='
-    BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or 'images'
+    BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') or 'image30'
+    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or '6g1dmgSmM4xJuujBArXCDZnGUe4kmxavKi2qyCc8qJ3RseIHhZRBLg/9xcclMiLY+oustPrFyXE/+AStKi8CwQ=='
+    BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or 'image'
 
-    SQL_SERVER = os.environ.get('SQL_SERVER') or 'cms-project.database.windows.net'
+    SQL_SERVER = os.environ.get('SQL_SERVER') or 'cmstan.database.windows.net'
     SQL_DATABASE = os.environ.get('SQL_DATABASE') or 'cms'
-    SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or 'cmsadmin'
-    SQL_PASSWORD = os.environ.get('SQL_PASSWORD') or 'CMS4dminD'
+    SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or 'sqladmin'
+    SQL_PASSWORD = os.environ.get('SQL_PASSWORD') or '!pwd1234'
     # Below URI may need some adjustments for driver version, based on your OS, if running locally
     SQLALCHEMY_DATABASE_URI = 'mssql+pyodbc://' + SQL_USER_NAME + '@' + SQL_SERVER + ':' + SQL_PASSWORD + '@' + SQL_SERVER + ':1433/' + SQL_DATABASE  + '?driver=ODBC+Driver+17+for+SQL+Server'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
